@@ -1,0 +1,37 @@
+<div id="page-content">
+    <h1 class='text-center'>Articals List</h1>
+    <% @artical.each do |artical|  %>
+        <div class='container'>
+            <div class='row justify-content-center'>
+                <div class="col-lg-8">
+                    <div class="card text-center mt-4 shadow mb-5 bg-white rounded">
+                        <div class="card-header font-italic">
+                            By Qasim
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><%= link_to artical.title, artical_path(artical), class: "text-success" %></h5>
+                            <p class="card-text"><%= truncate(artical.description, length:100) %></p>
+                            
+                            
+
+                            <%= link_to 'Edit', edit_artical_path(artical), class: "btn btn-outline-success my-2 my-sm-0" %>
+                             <%= link_to 'Show', artical_path(artical), class: "btn btn-outline-info my-2 my-sm-0" %>
+                            <%= link_to 'Delete', artical_path(artical), class: "btn btn-outline-danger my-2 my-sm-0",method:'delete' , data: {confirm: "Are you sure?"} %>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <small>Created <%= time_ago_in_words(artical.created_at) %> ago, 
+                            edited <%= time_ago_in_words(artical.updated_at) %> ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+
+
+
+    <br>
+    <p>
+    <td><%=link_to 'Create New Artical', new_artical_path %></td>
+    </p>
+</div>
