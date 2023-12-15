@@ -10,16 +10,21 @@ require("channels")
 
 
 import { Application } from "@hotwired/stimulus"
-import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers"
-
-const application = Application.start()
-const context = require.context("./controllers", true, /\.js$/)
+import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers 
 application.load(definitionsFromContext(context))
 
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+
+const application = Application.start()
+const context = require.context("../controllers", true, /\.js$/)
 import "bootstrap"
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require_tree .
+
+$(document).ready(function(){
+    $('.dropdown-toggle').dropdown();
+});
+$(document).ready(function(){
+    jQuery('.dropdown-toggle').dropdown();
+});

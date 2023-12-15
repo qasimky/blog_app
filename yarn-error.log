@@ -1,5 +1,5 @@
 Arguments: 
-  /home/qasim/.nvm/versions/node/v12.16.1/bin/node /home/qasim/.nvm/versions/node/v12.16.1/bin/yarn add bootstraph jquery popper.js
+  /home/qasim/.nvm/versions/node/v12.16.1/bin/node /home/qasim/.nvm/versions/node/v12.16.1/bin/yarn add @popperjs/cor
 
 PATH: 
   /home/qasim/.rvm/gems/ruby-2.7.0/bin:/home/qasim/.rvm/gems/ruby-2.7.0@global/bin:/home/qasim/.rvm/rubies/ruby-2.7.0/bin:/home/qasim/.rvm/bin:/home/qasim/.nvm/versions/node/v12.16.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Qasim Khan Yousafzai/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Qasim Khan Yousafzai/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Qasim Khan Yousafzai/AppData/Roaming/npm:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/bootstraph: Not found
+  Error: https://registry.yarnpkg.com/@popperjs%2fcor: Not found
       at Request.params.callback [as _callback] (/home/qasim/.nvm/versions/node/v12.16.1/lib/node_modules/yarn/lib/cli.js:66145:18)
       at Request.self.callback (/home/qasim/.nvm/versions/node/v12.16.1/lib/node_modules/yarn/lib/cli.js:140890:22)
       at Request.emit (events.js:311:20)
@@ -33,10 +33,14 @@ npm manifest:
     "dependencies": {
       "@hotwired/stimulus": "^3.2.2",
       "@hotwired/stimulus-webpack-helpers": "^1.0.1",
+      "@popperjs/core": "^2.11.8",
       "@rails/actioncable": "^6.0.0",
       "@rails/activestorage": "^6.0.0",
       "@rails/ujs": "^6.0.0",
       "@rails/webpacker": "4.3.0",
+      "bootstrap": "^5.3.2",
+      "jquery": "^3.7.1",
+      "popper.js": "^1.16.1",
       "turbolinks": "^5.2.0"
     },
     "version": "0.1.0",
@@ -1097,6 +1101,11 @@ Lockfile:
       mkdirp "^1.0.4"
       rimraf "^3.0.2"
   
+  "@popperjs/core@^2.11.8":
+    version "2.11.8"
+    resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
+    integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
+  
   "@rails/actioncable@^6.0.0":
     version "6.1.7"
     resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.1.7.tgz#8b4506925d3f7146a70941e4db7ce9dda99f99ae"
@@ -1926,6 +1935,11 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
     integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
+  
+  bootstrap@^5.3.2:
+    version "5.3.2"
+    resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.2.tgz#97226583f27aae93b2b28ab23f4c114757ff16ae"
+    integrity sha512-D32nmNWiQHo94BKHLmOrdjlL05q1c8oxbtBphQFb9Z5to6eGRDCm0QgeaZ4zFBHzfg2++rqa2JkqCcxDy0sH0g==
   
   brace-expansion@^1.1.7:
     version "1.1.11"
@@ -4557,6 +4571,11 @@ Lockfile:
       merge-stream "^2.0.0"
       supports-color "^7.0.0"
   
+  jquery@^3.7.1:
+    version "3.7.1"
+    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
+    integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
+  
   js-base64@^2.1.8:
     version "2.6.4"
     resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.4.tgz#f4e686c5de1ea1f867dbcad3d46d969428df98c4"
@@ -5717,6 +5736,11 @@ Lockfile:
     integrity sha512-2Rb3vm+EXble/sMXNSu6eoBx8e79gKqhNq9F5ZWW6ERNCTE/Q0wQNne5541tE5vKjfM8hpNCYL+LGc1YTfI0dg==
     dependencies:
       ts-pnp "^1.1.6"
+  
+  popper.js@^1.16.1:
+    version "1.16.1"
+    resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+    integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
   
   posix-character-classes@^0.1.0:
     version "0.1.1"
