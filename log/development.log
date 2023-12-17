@@ -27411,3 +27411,53 @@ Completed 200 OK in 82ms (Views: 69.9ms | ActiveRecord: 0.0ms | Allocations: 127
   [1m[36mArtical Load (0.1ms)[0m  [1m[34mSELECT "articals".* FROM "articals" ORDER BY "articals"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mArtical Load (0.1ms)[0m  [1m[34mSELECT "articals".* FROM "articals" ORDER BY "articals"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2023-12-15 09:00:28 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.2ms | Allocations: 483)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 141)
+Completed 200 OK in 54ms (Views: 46.6ms | ActiveRecord: 0.0ms | Allocations: 12870)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-15 09:00:48 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 208)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 41)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 4681)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-17 11:24:14 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.8ms | Allocations: 483)
+  Rendered layouts/_messages.html.erb (Duration: 1.6ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 141)
+Completed 200 OK in 131ms (Views: 112.8ms | ActiveRecord: 0.0ms | Allocations: 12855)
+
+
+Started GET "/articals" for 127.0.0.1 at 2023-12-17 11:24:24 -0800
+Processing by ArticalsController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 5148)
+
+
+  
+NoMethodError (undefined method `belong_to' for #<Class:0x00007fc1ac03f3c0>
+Did you mean?  belongs_to):
+  
+app/models/artical.rb:2:in `<class:Artical>'
+app/models/artical.rb:1:in `<main>'
+app/controllers/articals_controller.rb:8:in `index'
